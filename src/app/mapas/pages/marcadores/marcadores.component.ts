@@ -82,6 +82,10 @@ agregarMarcador(){
 
   this.guardarMarcadorLocalStorage();
 
+  nuevoMarcador.on('dragend', () => {
+    this.guardarMarcadorLocalStorage();
+  });
+
 }
 
 irMarcador( marker: mapboxgl.Marker ) {
